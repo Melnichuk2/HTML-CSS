@@ -16,11 +16,6 @@ header h1 {
     color: #fff;
 }
 
-header img {
-    max-width: 200px;
-    border-radius: 50%;
-}
-
 nav ul {
     list-style: none;
     display: flex;
@@ -60,15 +55,13 @@ ul li {
     margin: 5px 0;
 }
 
-
-
 /*про себе*/ 
-
 .name {
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
+    overflow: auto;
 }
 
 .name h2 {
@@ -79,11 +72,24 @@ ul li {
 }
 
 .name p {
+    margin: 0;
     font-size: 16px;
     color: #666;
     line-height: 1.5;
 }
 
+.name img{
+    float: left;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.name::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /* навички */
 .skills {
@@ -181,6 +187,7 @@ ul li {
 
 
 /*мова*/
+/* Розділ "Знання мов" */
 .language {
     background-color: #f2f2f2;
     padding: 20px;
@@ -193,10 +200,28 @@ ul li {
     color: #3498db;
     text-align: center;
 }
-.language p{
-    font-size: 17px;
-    color: #3498db
+
+.language-items {
+    display: flex;
+    justify-content: space-around;
 }
+
+.language-item {
+    text-align: center;
+}
+
+.language-м {
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.percentage {
+    font-size: 18px;
+    color: #666;
+    font-weight: bold;
+}
+
 
 /*соц мережа */
 .social {
@@ -237,15 +262,23 @@ ul li {
 
 /*адаптація до макс. екрану 768*/
 @media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
-    nav ul li {
-        margin: 10px 0;
+    .header {
+        padding: 20px 0;
+        } 
+        nav ul {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-evenly; 
+        }
+    
+        nav ul li {
+            width: 44%; 
+            margin: 9px; 
+        }
+
+    .name img {
+         max-width: 50%; 
     }
 }
-
 
