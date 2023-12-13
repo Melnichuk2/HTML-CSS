@@ -9,6 +9,7 @@ header {
     background-color: #3498db;
     text-align: center;
     padding: 30px 0;
+    
 }
 
 header h1 {
@@ -37,8 +38,7 @@ nav ul li a {
 section {
     margin: 30px;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 20px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -59,7 +59,6 @@ ul li {
 .name {
     background-color: #f2f2f2;
     padding: 20px;
-    border-radius: 10px;
     margin: 20px 0;
     overflow: auto;
 }
@@ -67,7 +66,6 @@ ul li {
 .name h2 {
     font-size: 24px;
     color: #3498db;
-    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -96,13 +94,11 @@ ul li {
 .skills {
     background-color: #f2f2f2;
     padding: 20px;
-    border-radius: 10px;
     margin: 20px 0;
 }
 .skills h2 {
     font-size: 24px;
     color: #3498db;
-    margin-bottom: 10px;
     text-align: center;
 }
 .skill-item {
@@ -138,14 +134,12 @@ ul li {
 .education {
     background-color: #f2f2f2;
     padding: 20px;
-    border-radius: 10px;
     margin: 20px 0;
 }
 
 .education h2 {
     font-size: 24px;
     color: #3498db;
-    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -165,14 +159,12 @@ ul li {
 .quality {
     background-color: #f2f2f2;
     padding: 20px;
-    border-radius: 10px;
     margin: 20px 0;
 }
 
 .quality h2 {
     font-size: 24px;
     color: #3498db;
-    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -192,7 +184,6 @@ ul li {
 .language {
     background-color: #f2f2f2;
     padding: 20px;
-    border-radius: 10px;
     margin: 20px 0;
 }
 
@@ -229,7 +220,6 @@ ul li {
 .social {
     background-color: #f2f2f2;
     padding: 20px;
-    border-radius: 10px;
     margin: 20px 0;
 }
 
@@ -284,4 +274,3 @@ ul li {
          margin-top: 0px;
     }
 }
-
