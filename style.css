@@ -83,6 +83,7 @@ ul li {
     max-width: 200px;
     border-radius: 50%;
     margin-right: 20px;
+    margin-top: -50px;
 }
 
 .name::after {
@@ -106,6 +107,7 @@ ul li {
 }
 .skill-item {
     margin: 15px 0;
+    font-size: 18px;
 }
 
 .skill-label {
@@ -213,10 +215,11 @@ ul li {
     font-weight: bold;
     color: #3498db;
     margin-bottom: 5px;
+    font-size: 18px;
 }
 
 .percentage {
-    font-size: 18px;
+    font-size: 20px;
     color: #666;
     font-weight: bold;
 }
@@ -278,6 +281,7 @@ ul li {
 
     .name img {
          max-width: 50%; 
+         margin-top: 0px;
     }
 }
 
