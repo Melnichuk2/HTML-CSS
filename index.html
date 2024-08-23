@@ -1,116 +1,171 @@
 <!DOCTYPE html>
-<html lang="uk">
+<lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме Мельничука Олександра</title>
+    <link rel="icon" href="icons/map-solid.svg" type="image/x-icon">
+    <title>Віртуальна екскурсія по Херсонському Державному Університету</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Мельничук Олександр</h1>
-        <h2>Веб-розробник</h2>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#name">Про себе</a></li>
-            <li><a href="#skills">Навички</a></li>
-            <li><a href="#education">Освіта</a></li>
-            <li><a href="#quality">Особисті навички</a></li>
-            <li><a href="#language">Знання мов</a></li>
-            <li><a href="#social">Контакти</a></li>
-        </ul>
-    </nav>
-    
-    <section id="name" class="name">
-      <h2>Про себе</h2>
-      <img src= "photo228.jpg" alt="Зображення профілю">
-        <p>Я маю велике бажання працювати у галузі веб-розробки та вже маю певний досвід у написанні веб-сайтів. Мої основні навички включають в себе мови програмування HTML, CSS які дозволяють мені створювати і вдосконалювати веб-сайти. Крім того, я маю досвід роботи з базами даних, що дозволяє мені створювати веб-додатки та інтегрувати їх з різними джерелами даних.</p>
-    
-        <p>Я завжди відкритий до постійного навчання та розвитку своїх навичок у цій сфері, оскільки веб-розробка постійно еволюціонує. Я готовий приймати виклики та вдосконалювати свої знання, щоб досягти високих результатів у веб-розробці.</p>
-    </section>
+<header>
+    <h1>Віртуальна екскурсія по Університету</h1>
+    <button id ='buttonMap'>Головна</button>
+    <button onclick="autoShowLocations()">Екскурсія</button>
+    <div class="link">
+        <button class="link-soc">Соціальні мережі</button>
+        <div class="link-content">
+          <a href="https://www.kspu.edu/"><img src="icons/graduation-cap-solid.jpg"> </a>
+          <a href="https://www.instagram.com/kherson_state_university?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="icons/instagram.jpg"></a>
+          <a href="https://www.tiktok.com/@kherson_state_university?is_from_webapp=1&sender_device=pc"><img src="icons/tiktok.jpg"></a>
+  </div>
+  </div>
+  <div id="hamburger" class="hamburger">&#9776;</div> 
+  </header>
 
-    <section id="skills" class ="skills">
-        <h2>Навички</h2>
-        <div class="skill-item">
-          <p class="skill-label">HTML</p>
-          <div class="progress-bar">
-              <div class="progress" style="width: 60%;">60%</div>
-          </div>
-      </div>
-      <div class="skill-item">
-          <p class="skill-label">CSS</p>
-          <div class="progress-bar">
-              <div class="progress" style="width: 37%;">37%</div>
-          </div>
-      </div>
-      <div class="skill-item">
-        <p class="skill-label">Python</p>
-        <div class="progress-bar">
-            <div class="progress" style="width: 57%;">57%</div>
-          </div>
-      </div>
-      <div class="skill-item">
-          <p class="skill-label">C#</p>
-          <div class="progress-bar">
-              <div class="progress" style="width: 50%;">50%</div>
-          </div>
-      </div>
-      <div class="skill-item">
-          <p class="skill-label">C++</p>
-          <div class="progress-bar">
-              <div class="progress" style="width: 45%;">45%</div>
-          </div>
-      </div>
-    </section>
-    
-    <section id="education" class ="education">
-        <h2>Освіта</h2>
-        <ul>
-            <li>Загальноосвітня школа I-III ступенів №47 Херсонської міської ради</li>
-            <li>Херсонський Державний Університет 2021-2025</li>
-        </ul>
-    </section>
-    
-    <section id="quality" class = "quality">
-      <h2>Особисті якості</h2>
-      <ul>
-        <li>Креативність</li>
-        <li>Здатність до навчання</li>
-        <li>Акуратність</li>
-        <li>Допитливий</li>
-      </ul>
-    </section>
-
-    <section id="language" class="language">
-        <h2>Знання мов</h2>
-        <div class="language-items">
-            <div class="language-item">
-                <p class="language-м">Українська </p>
-                <p class="percentage">100%</p>
-            </div>
-            <div class="language-item">
-                <p class="language-м">Англійська</p>
-                <p class="percentage">45%</p>
-            </div>
-            <div class="language-item">
-                <p class="language-м">Німецька</p>
-                <p class="percentage">18%</p>
-            </div>
+  
+  <div class="grid-container">
+    <div class="grid-item">
+        <img src="jpg/карта111.jpg" alt="карта унів">
+        <div class="marker marker1" onclick="showLocation('Вхід до Херсонського Деражвного Університету')">
+            <span class="location-name">Вхід до ХДУ</span>
         </div>
-    </section>
-    
-    
+        <div class="marker marker2" onclick="showLocation('Парк')">
+            <span class="location-name">Парк</span>
+        </div>
+        <div class="marker marker3" onclick="showLocation('Вхід до ліцею')" >
+            <span class="location-name">Вхід до ліцею</span>
+        </div>
+        <div class="marker marker4" onclick="showLocation('Басейн')">
+            <span class="location-name">Басейн</span>
+        </div>
+        <div class="marker marker5" onclick="showLocation('Стадіон')">
+            <span class="location-name">Стадіон</span>
+        </div>
+        <div class="marker marker6" onclick="showLocation('Пам`ятний меморіал')">
+            <span class="location-name">Пам'ятний меморіал</span>
+        </div>
+    </div>
+    <div class="grid-item">
+        <img src="jpg/5корпус.jpg" alt="5 корпус">
+        <div class="marker marker7" onclick="showLocation('Навчально-лабораторний комплексу ХДУ №5')">
+          <span class="location-name">НЛК ХДУ №5</span>
+        </div>
+    </div>
+    <div class="grid-item">
+        <img src="jpg/ботсад.jpg" alt="бот.сад">
+        <div class="marker marker8" onclick="showLocation('Ботаніческий сад ХДУ')">
+          <span class="location-name">Ботаніческий сад ХДУ</span>
+        </div>
+        
+    </div>
+    <div class="grid-item">
+        <img src="jpg/бурев.jpg" alt="Буревісник">
+        <div class="marker marker9" onclick="showLocation('СОТ Буревісник')">
+          <span class="location-name">Буревісник</span>
+        </div>
+        
+    </div>
+    <div class="grid-item">
+        <img src="jpg/водстанц.jpg" alt="Водяна станція">
+        <div class="marker marker10" onclick="showLocation('Водна станція')">
+          <span class="location-name">НЛК ХДУ №5</span>
+        </div>      
+    </div>
+</div>
 
-    <section id="social" class ="social">
-        <h2>Контакти</h2>
-        <ul>
-            <li><a href ="https://t.me/ggggggum">Telegram: @ggggggum</a></li>
-            <li><a href ="https://join.skype.com/invite/GekBh5j9x7os">Skype: Олександр Мельничук </a></li>
-            <li><a href ="mailto:melnicuks54@gmail.com">Gmail: melnicuks54@gmail.com</a>
-            <li><a href ="https://github.com/Melnichuk2">GitHub: Melnichuk2</li>   
-        </ul>
-    </section>    
-    <header></header>
-</body>
+
+
+<nav class="nav" id="nav-menu">
+  <div id="hamburger2" class="hamburger2">&#9776;</div> 
+    <div class="dropdown">
+        <button class="dropbtn">Університет</button>
+        <div class="dropdown-content">
+          <a onclick="showLocation('Вхід до Херсонського Деражвного Університету')">Вхід до Херсонського Деражвного Університету</a>
+          <a onclick="showLocation('Приймальна комісія')">Приймальна комісія</a>
+          <a onclick="showLocation('Головна зала')">Хол</a>
+          <a onclick="showLocation('Бібліотека')">Бібліотека</a>
+          <a onclick="showLocation('Перший поверх')">Перший поверх</a>
+          <a onclick="showLocation('Другий поверх')">Другий поверх</a>
+          <a onclick="showLocation('Актова зала')">Актова зала</a>
+          <a onclick="showLocation('Другий поверх біля актової зали')">Біля актової зали</a>
+          <a onclick="showLocation('Третій поверх')">Третій поверх</a>
+          <a onclick="showLocation('Четвертий поверх')">Четвертий поверх</a>
+          <a onclick="showLocation('П`ятий поверх')">П'ятий поверх</a>
+          <a onclick="showLocation('Шостий поверх')">Шостий поверх</a>
+          <a onclick="showLocation('Сьомий поверх')">Сьомий поверх</a>
+          <a onclick="showLocation('Восьмий поверх')">Восьмий поверх</a>
+          
+        </div>
+      </div>
+    
+    <div class="dropdown">
+        <button class="dropbtn">Парк</button>
+        <div class="dropdown-content">
+          <a onclick="showLocation('Парк')">Парк</a>
+          <a onclick="showLocation('Дитячий майданчик')">Дитячий майданчик</a>
+          <a onclick="showLocation('Фонтан')">Фонтан</a>
+          <a onclick="showLocation('Панелі')">Панелі</a>
+          <a onclick="showLocation('Спортивний майданчик')">Спорт-майданчик</a>
+          <a onclick="showLocation('Пам`ятний меморіал')">Пам`ятний меморіал</a>
+          <a onclick="showLocation('Стадіон')">Футбольний міні-стадіон</a>
+    </div> 
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">ХАЛ ім. О.В. Мішукова</button>
+        <div class="dropdown-content">
+          <a onclick="showLocation('Вхід до ліцею')">Вхід до ліцею</a>
+    </div> 
+    </div>
+      <div class="dropdown">
+        <button class="dropbtn">Басейн</button>
+        <div class="dropdown-content">
+          <a onclick="showLocation('Вхід до басейну')">Вхід до басейну</a>
+          <a onclick="showLocation('Басейн')">Басейн</a>
+          <a onclick="showLocation('Роздягальня басейн')">Роздягальня</a>
+        </div>
+      </div> 
+      <div class="dropdown">
+        <button class="dropbtn">НЛК ХДУ №5</button>
+        <div class="dropdown-content">
+          <a onclick="showLocation('Навчально-лабораторний комплексу ХДУ №5')">НЛК ХДУ №5</a>
+          <a onclick="showLocation('1 поверх')">Перший поверх</a>
+          <a onclick="showLocation('2 поверх')">Другий поверх</a>
+          <a onclick="showLocation('3 поверх')">Третій поверх</a>
+          <a onclick="showLocation('4 поверх')">Четвертий поверх</a>
+          <a onclick="showLocation('5 поверх')">П'ятий поверх</a>
+      </div> 
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Ботаніческий сад ХДУ</button>
+        <div class="dropdown-content">
+          <a onclick="showLocation('Ботаніческий сад ХДУ')">Ботаніческий сад</a>
+      </div> 
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">СОТ "Буревісник"</button>
+        <div class="dropdown-content">
+          <a onclick="showLocation('СОТ Буревісник')">Буревісник</a>
+      </div> 
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Водна станція</button>
+        <div class="dropdown-content">
+          <a onclick="showLocation('Водна станція')">Водна станція</a>
+      </div> 
+      </div>
+</nav> 
+
+<div id = location-info>
+    <div id="location-content">
+      <img id="location-image">
+      <p id="location-description"></p>
+    </div>
+  </div>
+<footer>
+</footer>
+  <script src="script.js"></script>
 </html>
